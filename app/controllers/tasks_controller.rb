@@ -51,5 +51,5 @@ def set_task
 end
 
 def params_task
-  params.require(:task).permit(:content)
+  params.require(:task).permit(:content, :status)
 end
