@@ -1,0 +1,16 @@
+<% if users.any? %>
+  <ul>
+    <% users.each do |user| %>
+      <li>
+        <img src="<%= gravatar_url(user, { size:50 }) %>" alt="">
+        <div>
+          <div>
+            <%= user.name %>
+          </div>
+        </div>
+      </li>
+    <% end %>
+    <%= link_to "トップ画面に戻る", toppage_path %>
+  </ul>
+  <%= paginate users %>
+<% end %>
